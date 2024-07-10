@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body{
+            line-height: 35px;
+            position: relative;
+            top: 86px;
+            left: 35%;
+            border: 1px solid yellowgreen;
+            width: 30%;
+            padding-left: 9%;
+            height: 69vh;
+            background-color: darkmagenta;
+        }
+        .kr{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="i1">Name</label> <input type="text" placeholder="Enter your name" id="i1"> <br>
+        <label for="i2">Surname</label> <input type="text" placeholder="Enter your surname" id="i2"><br>
+        <label for="date">Birthday</label> <input type="date" id="date"><br>
+        <label for="s">Sex</label> <select id="s">
+            <option Value="M">Masculin</option>
+            <option value="F">Feminin</option>
+        </select><br>
+        <label for="country">Birth country</label> <select id="country">
+            <option value="Algerie">Algerie</option>
+            <option value="Angola">Angola</option>
+            <option value="Botswana">Botswana</option>
+            <option value="Burundi">Burundi</option>
+            <option value="Burkina-Faso">Burkina-Faso</option>
+            <option value="Benin">Benin</option>
+            <option value="Cameroon">Cameroon</option>
+            <option value="Comores">Comores</option>
+            <option value="Djibouti">Djibouti</option>
+            <option value="Erythrea">Erythrea</option>
+            <option value="Egypt">Egypt</option>
+            <option value="Ghana">Ghana</option>
+            <option value="Guinea">Guinea</option>
+            <option value="Guinea Bissau">Guinea Bissau</option>
+            <option value="Gambia">Gambia</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Lesotho">Lesotho</option>
+            <option value="Madagascar">Madagascar</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Mauritania">Mauritania</option>
+            <option value="Mozambique">Mozambique</option>
+            <option value="Mali">Mali</option>
+            <option value="Malawi">Malawi</option>
+            <option value="Namibia">Namibia</option>
+            <option value="Niger">Niger</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Sudan">Sudan</option>
+            <option value="South africa">South africa</option>
+            <option value="South Sudan">South Sudan</option>
+            <option value="Zambia">Zambia</option>
+            <option value="Zimbabwe">Zimbabwe</option>
+        </select><br>
+        <label for="lang">Language spoken</label> <select id="lang">
+            <option value="French">French</option>
+            <option value="English">English</option>
+            <option value="Deutsch">Deutsch</option>
+            <option value="Afrikaans">Afrikaans</option>
+            <option value="Bengal">Bengal</option>
+            <option value="Chinese">Chinese</option>
+        </select><br>
+        <label>Email</label> <input type="mail" placeholder="email" id="mayil"><br>
+        <label for="pass">Password</label> <input type="password" placeholder="Password" id="pass"> <br>
+        <p id="az" class="kr">Mot de passe non semblable</p>
+        <label for="pass2">Confirm the password</label> <input type="password" placeholder="confirm your password" id="pass2">
+    </div>
+    <div>
+        <button id="bt">CONFIRM</button>
+    </div>
+    <script>
+        let mp= document.getElementById('pass');
+        let mp1=document.getElementById('pass2');
+        let name=document.getElementById('i1');
+        let email=document.getElementById('mayil');
+        let conf=document.getElementById('bt');
+        conf.addEventListener('click',coco());
+        function coco(){
+        if(mp===mp1){
+        localStorage.setItem('izina','name');
+        localStorage.setItem('ipasse','i1');
+        windows.location.href='';            
+        }else{
+            document.getElementById('az').classList.toggle("kr");
+        }
+        }
+        
+    </script>
+</body>
+</html>
